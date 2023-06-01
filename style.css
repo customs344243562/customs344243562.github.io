@@ -45,7 +45,6 @@
 	.taxresult {
 		color: #faa300;
 		font-size: x-large;
-		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 		font-weight: bolder;
 	}
 	h1:first-child {
