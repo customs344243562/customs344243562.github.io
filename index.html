@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>HBE Customs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="HBE Customs Helper" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <link rel="canonical" href="https://msami-shaaban.github.io" />
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/ios/512.png">
+  <link rel="android-chrome-192x192" type="image/png" sizes="192x192" href="android/android-launchericon-192-192.png">
+  <link rel="android-chrome-512x512" type="image/png" sizes="512x512" href="android/android-launchericon-512-512.png">
+  <link rel="favicon-16x16" type="image/png" sizes="16x16" href="ios/16.png">
+  <link rel="favicon-32x32" type="image/png" sizes="16x16" href="ios/32.png">
+  <meta name="pwa-capable" content="yes">
+  <link rel="stylesheet" href="https://cdn.korzh.com/metroui/v4.5.1/css/metro-all.min.css">
+  <script src="https://cdn.korzh.com/metroui/v4.5.1/js/metro.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="body">
+<div class="grid">
+	<div class="row">
+		<div class="cell">
+			<div class="img-container">
+				<img src="topAreaImage.jpeg">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="cell ">
+			 <h1 class="text-center" style="color: lawngreen;font-size: xx-large;margin-top: 3;margin-bottom: 3;">حساب الضرائب و الرسوم</h1>
+		</div>
+	</div>
+    <div class="row">
+        <div class="cell hgr" onclick="document.getElementsByTagName('input')[0].focus()">
+			<div class="text-center"> هدايا 
+			<div style="font-size: 15px; font-weight: bold;">60% + 14%</div>
+				<div class="input"><input style="text-align: center;background: transparent;color: white;font-size: 20px;" type="number" data-role="input" onchange="tax(this,60,14,0)" id="cat1" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+			</div>
+        </div>
+        <div class="cell">
+			<div class="text-center" style="margin-top: 15;">الضريبة</div>
+			<div class="text-center" id="cat1tax" style="color: white;font-size: 20px;">0</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="cell hgr" onclick="document.getElementsByTagName('input')[1].focus()">
+			<div class="text-center">ملابس
+			 <div style="font-size: 15px; font-weight: bold;">40% + 14%</div>
+				<div class="input"><input style="text-align: center;background: transparent;color: white;font-size: 20px;" type="number" data-role="input" onchange="tax(this,40,14,0)" id="cat2" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+			</div>
+        </div>
+        <div class="cell">
+			<div class="text-center" style="margin-top: 15;">الضريبة</div>
+			<div class="text-center" id="cat2tax" style="color: white;font-size: 20px;">0</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="cell hgr" onclick="document.getElementsByTagName('input')[2].focus()">
+			<div class="text-center">موبايل
+			<div style="font-size: 15px; font-weight: bold;">10% + 14% + 5%</div>
+				<div class="input"><input style="text-align: center;background: transparent;color: white;font-size: 20px;" type="number" data-role="input" onchange="tax(this,10,14,5)" id="cat3" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+			</div>
+        </div>
+        <div class="cell">
+			<div class="text-center" style="margin-top: 15;">الضريبة</div>
+			<div class="text-center taxes" id="cat3tax" style="color: white;font-size: 20px;">0</div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="cell hgr" style="margin-right: 0;" onclick="document.getElementsByTagName('input')[3].focus()">
+			<div class="text-center" style="font-size:large;">T.V حجم
+				<div class="input"><input id="tvsize" style="text-align: center;background: transparent;color: white;font-size: 20px;/* margin-left: 1; */" type="number" data-role="input" onchange="taxtv(this,10,14,5)" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+			</div>
+        </div>
+        <div class="cell hgr" style="margin-left: 5;margin-right: 35;" onclick="document.getElementsByTagName('input')[4].focus()">
+			<div class="text-center" style="font-size:large;">سعر البوصة
+				<div class="input"><input id="tvpriceperin" style="text-align: center;background: transparent;color: white;font-size: 20px;" type="number" data-role="input" onchange="taxtv(document.getElementById('cat4'),10,14,5)" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+			</div>
+        </div>
+        <div class="cell" style="margin-right: 0;margin-left: 5;">
+			<div class="text-center" style="margin-top: auto;">الثمن</div>
+			<div class="text-center taxes" id="tvspricetotal" style="color: white;font-size: 20px;">0</div>
+        </div>
+        <div class="cell" style="
+    margin-left: 5;
+">
+			<div class="text-center" style="margin-top: auto;">الضريبة</div>
+			<div class="text-center taxes" id="cat4tax" style="color: white;font-size: 20px;">0</div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="cell hgr" onclick="document.getElementsByTagName('input')[5].focus()">
+			<div class="text-center">مستحضرات التجميل
+			<div style="font-size: 15px; font-weight: bold;">45% + 8% + 14%</div>
+				<div class="input"><input style="text-align: center;background: transparent;color: white;font-size: 20px;" type="number" data-role="input" onchange="tax(this,45,14,8)" id="cat5" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+			</div>
+        </div>
+        <div class="cell">
+			<div class="text-center" style="margin-top: 15;">الضريبة</div>
+			<div class="text-center taxes" id="cat5tax" style="color: white;font-size: 20px;">0</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="cell hgr" onclick="document.getElementsByTagName('input')[6].focus()">
+			<div class="text-center">الخمور
+			<div style="font-size: 15px; font-weight: bold;">3000% + 150% + 14%</div>
+				<div class="input"><input style="text-align: center;background: transparent;color: white;font-size: 20px;" type="number" data-role="input" onchange="tax(this,3000,14,150)" id="cat6" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+			</div>
+        </div>
+        <div class="cell">
+			<div class="text-center" style="margin-top: 15;">الضريبة</div>
+			<div class="text-center taxes" id="cat6tax" style="color: white;font-size: 20px;">0</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="cell" style="background: #ff00002e;">
+			<div class="text-center">الإجمالي</div>
+			<div class="text-center taxes" id="totalvalue" style="color: #1bf719;font-size: 20px;">0</div>
+        </div>
+        <div class="cell" style="background: #ff000094;">
+			<div class="text-center">إجمالي الضرائب</div>
+			<div class="text-center taxes" id="totaltax" style="color: #1bf719;font-size: 20px;">0</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="cell" style="background: #ff000094;">
+			<div>
+			<div class="text-center">%غرامة سداد نقدي 5</div>
+			<div class="text-center" id="fine" style="color: #1bf719;font-size: 20px;">0</div>
+			</div>
+        </div>
+        <div class="cell" style="background: #ff00002e;">
+			<div class="text-center">إجمالي المطلوب نقداً</div>
+			<div class="text-center" id="totalincfine" style="color: #1bf719;font-size: xx-large;">0</div>
+        </div>
+    </div>
+    
+	<div class="row">
+		<div class="cell ">
+			<h1 class="text-center" style="color: lawngreen;font-size: xx-large;margin-top: 3;margin-bottom: 3;">حساب الضرائب لأي فئة</h1>
+		</div>
+	</div>
+	<div class="row">
+        <div class="cell hgr" style="margin-right: 0;" onclick="document.getElementsByTagName('input')[7].focus()">
+			<div class="text-center" style="font-size:large;">القيمة
+				<div class="input"><input id="calctax-value" style="text-align: center;background: transparent;color: white;font-size: 20px;" type="number" data-role="input" onchange="calctax()" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+			</div>
+        </div>
+        <div class="cell hgr" style="margin-right: 0;margin-left: 5;" onclick="document.getElementsByTagName('input')[8].focus()">
+			<div class="text-center" style="font-size:large;"> % فئة وارد
+				<div class="input"><input id="calctax-per1" style="text-align: center;background: transparent;color: white;font-size: 20px;" type="number" data-role="input" onchange="calctax()" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+			</div>
+        </div>
+        <div class="cell hgr" style="margin-right: 0;margin-left: 5;" onclick="document.getElementsByTagName('input')[9].focus()">
+			<div class="text-center" style="font-size:large;"> % فئة جدول
+				<div class="input"><input id="calctax-per3" style="text-align: center;background: transparent;color: white;font-size: 20px;" type="number" data-role="input" onchange="calctax()" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+			</div>
+        </div>
+        <div class="cell hgr" style="margin-left: 5;" onclick="document.getElementsByTagName('input')[10].focus()">
+			<div class="text-center" style="font-size:large;"> % فئة ق مضافة
+				<div class="input"><input id="calctax-per2" style="text-align: center;background: transparent;color: white;font-size: 20px;" type="number" data-role="input" onchange="calctax()" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+			</div>
+        </div>
+	</div>
+	<div class="row"style="margin-top: 10;">
+        <div class="cell hgr" style="margin-right: 0;">
+			<div class="text-center" style="margin-top: 15;font-size:large;">ض وارد</div>
+			<div class="text-center" id="calctax-res1" style="color: #1bf719;font-size: 20px;">0</div>
+        </div>
+        <div class="cell hgr" style="margin-right: 0;margin-left: 5;">
+			<div class="text-center" style="margin-top: 15;font-size:large;">ض جدول</div>
+			<div class="text-center" id="calctax-res3" style="color: #1bf719;font-size: 20px;">0</div>
+        </div>
+        <div class="cell hgr" style="margin-right: 0;margin-left: 5;">
+			<div class="text-center" style="margin-top: 15;font-size:large;">ض قيمة مضافة</div>
+			<div class="text-center" id="calctax-res2" style="color: #1bf719;font-size: 20px;">0</div>
+        </div>
+        <div class="cell hgr" style="margin-left: 5;background: #ff00002e;">
+			<div class="text-center" style="margin-top: 15;font-size:large;">إجمالي الضريبة</div>
+			<div class="text-center" id="calctax-total" style="color: #1bf719;font-size: large;">0</div>
+        </div>
+	</div>
+    <div class="row">
+		<div class="cell " style="margin-top: 50px;    background: #ffffff00;">
+<h1 class="text-center" style="
+    background: transparent;
+    /* padding: 10px; */
+    color: #ffff0061;
+    font-size: smaller;
+    margin-bottom: 1px;
+    /* text-align: left; */
+">By : Mostafa Hussein</h1>
+<h1 class="text-center" style="
+    background: transparent;
+    /* padding: 10px; */
+    color: #ffff0061;
+    font-size: smaller;
+    margin-top: 2px;
+    margin-bottom: 1px;
+">Website created by: Mohamed Samy</h1>
+		</div>
+    </div>
+</div>
+<div style="margin-bottom: 30px;"></div>
+    <!-- Metro UI -->
+        <script>
+ 
+        function tax(element,taxper,addedvalue,devper) {
+			id=element.id
+			taxper=parseFloat(taxper/100)
+			addedvalue=parseFloat(addedvalue/100)
+			devper=parseFloat(devper/100)
+			perinputVal=parseFloat(Number(document.getElementById(id).value));
+			num=parseFloat(perinputVal*taxper+(perinputVal+(perinputVal*taxper))*addedvalue+(perinputVal+perinputVal*taxper+(perinputVal+(perinputVal*taxper))*addedvalue)*devper).toFixed(2);
+			document.getElementById(id+"tax").innerHTML=Math.ceil(num);
+			
+			
+			document.getElementById("totalvalue").innerHTML=Number(document.getElementsByTagName("input")[0].value)+Number(document.getElementsByTagName("input")[1].value)+Number(document.getElementsByTagName("input")[2].value)+Number(document.getElementsByTagName("input")[5].value)+Number(document.getElementsByTagName("input")[6].value)+Number(document.getElementById("tvspricetotal").innerHTML);
+			
+			document.getElementById("totaltax").innerHTML=Number(document.getElementById("cat1tax").innerHTML)+Number(document.getElementById("cat2tax").innerHTML)+Number(document.getElementById("cat3tax").innerHTML)+Number(document.getElementById("cat4tax").innerHTML)+Number(document.getElementById("cat5tax").innerHTML)+Number(document.getElementById("cat6tax").innerHTML);
+			
+			fine=Math.ceil(Number(document.getElementById("totaltax").innerHTML)*.05);
+			if (fine>7000){
+				fine=7000;
+			}
+			document.getElementById("fine").innerHTML=fine;
+			document.getElementById("totalincfine").innerHTML=Math.ceil(Number(document.getElementById("totaltax").innerHTML)+fine);
+        }
+        function taxtv() {
+			tvsize=Number(document.getElementById("tvsize").value);
+			tvpriceperin=Number(document.getElementById("tvpriceperin").value);
+			taxper=parseFloat(40/100)
+			addedvalue=parseFloat(14/100)
+			if (tvsize>32)
+			{
+				devper=parseFloat(8/100)
+			}
+			else
+			{
+				devper=0
+			}
+			tvspricetotal=Math.ceil(tvsize*tvpriceperin);
+			document.getElementById("tvspricetotal").innerHTML=tvspricetotal;
+			
+			id="cat4"
+			
+			perinputVal=parseFloat(tvspricetotal);
+			num=parseFloat(perinputVal*taxper+(perinputVal+(perinputVal*taxper))*addedvalue+(perinputVal+perinputVal*taxper+(perinputVal+(perinputVal*taxper))*addedvalue)*devper).toFixed(2);
+			document.getElementById("cat4tax").innerHTML=Math.ceil(num);
+			
+			
+			document.getElementById("totalvalue").innerHTML=Number(document.getElementsByTagName("input")[0].value)+Number(document.getElementsByTagName("input")[1].value)+Number(document.getElementsByTagName("input")[2].value)+Number(document.getElementsByTagName("input")[5].value)+Number(document.getElementsByTagName("input")[6].value)+Number(document.getElementById("tvspricetotal").innerHTML);
+			
+			document.getElementById("totaltax").innerHTML=Number(document.getElementById("cat1tax").innerHTML)+Number(document.getElementById("cat2tax").innerHTML)+Number(document.getElementById("cat3tax").innerHTML)+Number(document.getElementById("cat4tax").innerHTML)+Number(document.getElementById("cat5tax").innerHTML)+Number(document.getElementById("cat6tax").innerHTML);
+			
+			fine=Math.ceil(Number(document.getElementById("totaltax").innerHTML)*.05);
+			if (fine>7000){
+				fine=7000;
+			}
+			document.getElementById("fine").innerHTML=fine;
+			document.getElementById("totalincfine").innerHTML=Math.ceil(Number(document.getElementById("totaltax").innerHTML)+fine);
+        }
+		function calctax() {
+			taxper=parseFloat(Number(document.getElementById("calctax-per1").value)/100)
+			addedvalue=parseFloat(Number(document.getElementById("calctax-per2").value)/100)
+			tableper=parseFloat(Number(document.getElementById("calctax-per3").value)/100);
+			perinputVal=parseFloat(Number(document.getElementById("calctax-value").value));
+			
+			//ض الوارد
+			num=parseFloat(perinputVal*taxper).toFixed(2);
+			document.getElementById("calctax-res1").innerHTML=Math.round(num);
+			
+			//ض جدول
+			num=parseFloat((perinputVal+(perinputVal*taxper))*tableper).toFixed(2);
+			document.getElementById("calctax-res3").innerHTML=Math.round(num);
+			
+			//ض قيمة مضافة
+			num=parseFloat((perinputVal+perinputVal*taxper+(perinputVal+(perinputVal*taxper))*tableper)*addedvalue).toFixed(2);
+			document.getElementById("calctax-res2").innerHTML=Math.round(num);
+
+			//إجمالي
+			num=parseFloat(perinputVal*taxper + (perinputVal+(perinputVal*taxper))*tableper + (perinputVal+perinputVal*taxper+(perinputVal+(perinputVal*taxper))*tableper)*addedvalue).toFixed(2);
+			document.getElementById("calctax-total").innerHTML=Math.ceil(num);
+        }
+    </script>
+  <script>
+    // PWA
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register(
+        '/service-worker.js', {
+          scope: '/'
+        }
+      )
+    }
+  </script>
+</body>
+</html>

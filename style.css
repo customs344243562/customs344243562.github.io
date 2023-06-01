@@ -1,0 +1,28 @@
+    .row {
+		margin-top: 20px;
+	}
+    .cell {
+	    background: rgb(59 60 60 / 56%);
+		color: rgb(245, 245, 17);
+		font-size: 25px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+   .hgr {
+	    background: #161616ba;
+		color: rgb(245, 245, 17);
+		font-size: 25px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	.input {
+		background: transparent;
+		border: transparent;	
+		
+	}
+	.body {
+		text-rendering: auto;
+		background-image: url(backgroundImage.jpeg);
+		font-family: Roboto,Helvetica,Arial,sans-serif;
+		background-size: cover;
+	}
