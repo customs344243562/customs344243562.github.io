@@ -8,6 +8,7 @@ const VERSION = 'version_01';
 const URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
+  `${GHPATH}/main.js`,
   `${GHPATH}/backgroundImage.jpeg`,
   `${GHPATH}/favicon.png`,
   `${GHPATH}/style.css`,
