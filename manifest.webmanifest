@@ -457,7 +457,7 @@
   "background_color": "#111111",
   "display": "fullscreen",
   "description": "HBE Customs",
-  "orientation": "any",
+  "orientation": "portrait-primary",
   "lang": "en",
   "dir": "auto",
   "display_override": [
