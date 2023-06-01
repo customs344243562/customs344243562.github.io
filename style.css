@@ -5,15 +5,11 @@
 	    background: rgb(59 60 60 / 56%);
 		color: rgb(245, 245, 17);
 		font-size: 25px;
-		margin-left: 20px;
-		margin-right: 20px;
+		margin-left: 5px;
+		margin-right: 5px;
 	}
    .hgr {
 	    background: #161616ba;
-		color: rgb(245, 245, 17);
-		font-size: 25px;
-		margin-left: 20px;
-		margin-right: 20px;
 	}
 	.input {
 		background: transparent;
