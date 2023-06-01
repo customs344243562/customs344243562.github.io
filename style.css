@@ -1,4 +1,4 @@
-    .row {
+.row {
 		margin-top: 20px;
 	}
     .cell {
@@ -57,4 +57,10 @@
 		margin-bottom: 1px;
 		font-size: medium;
 		font-weight: bold;
+	}
+	.inputstyle {
+		text-align: center;
+		background: transparent;
+		color: white;
+		font-size: large;
 	}
