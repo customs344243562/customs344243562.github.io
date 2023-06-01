@@ -42,7 +42,7 @@
         <div class="cell hgr" onclick="document.getElementsByTagName('input')[0].focus()">
 			<div class="text-center"> هدايا 
 			<div style="font-size: 15px; font-weight: bold;">60% + 14%</div>
-				<div class="input"><input style="text-align: center;background: transparent;color: white;font-size: 20px;" type="number" data-role="input" onchange="tax(this,60,14,0)" id="cat1" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+				<div class="input"><input class="inputstyle" type="number" data-role="input" onchange="tax(this,60,14,0)" id="cat1" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
 			</div>
         </div>
         <div class="cell">
@@ -55,7 +55,7 @@
         <div class="cell hgr" onclick="document.getElementsByTagName('input')[1].focus()">
 			<div class="text-center">ملابس
 			 <div style="font-size: 15px; font-weight: bold;">40% + 14%</div>
-				<div class="input"><input style="text-align: center;background: transparent;color: white;font-size: 20px;" type="number" data-role="input" onchange="tax(this,40,14,0)" id="cat2" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+				<div class="input"><input class="inputstyle" type="number" data-role="input" onchange="tax(this,40,14,0)" id="cat2" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
 			</div>
         </div>
         <div class="cell">
@@ -68,7 +68,7 @@
         <div class="cell hgr" onclick="document.getElementsByTagName('input')[2].focus()">
 			<div class="text-center">موبايل
 			<div style="font-size: 15px; font-weight: bold;">10% + 14% + 5%</div>
-				<div class="input"><input style="text-align: center;background: transparent;color: white;font-size: 20px;" type="number" data-role="input" onchange="tax(this,10,14,5)" id="cat3" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+				<div class="input"><input class="inputstyle" type="number" data-role="input" onchange="tax(this,10,14,5)" id="cat3" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
 			</div>
         </div>
         <div class="cell">
@@ -81,12 +81,12 @@
     <div class="row">
         <div class="cell hgr" style="margin-right: 0;" onclick="document.getElementsByTagName('input')[3].focus()">
 			<div class="text-center" style="font-size:large;">T.V حجم
-				<div class="input"><input id="tvsize" style="text-align: center;background: transparent;color: white;font-size: 20px;/* margin-left: 1; */" type="number" data-role="input" onchange="taxtv(this,10,14,5)" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+				<div class="input"><input id="tvsize" class="inputstyle" type="number" data-role="input" onchange="taxtv(this,10,14,5)" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
 			</div>
         </div>
         <div class="cell hgr" style="margin-left: 5;margin-right: 35;" onclick="document.getElementsByTagName('input')[4].focus()">
 			<div class="text-center" style="font-size:large;">سعر البوصة
-				<div class="input"><input id="tvpriceperin" style="text-align: center;background: transparent;color: white;font-size: 20px;" type="number" data-role="input" onchange="taxtv(document.getElementById('cat4'),10,14,5)" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+				<div class="input"><input id="tvpriceperin" class="inputstyle" type="number" data-role="input" onchange="taxtv(document.getElementById('cat4'),10,14,5)" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
 			</div>
         </div>
         <div class="cell" style="margin-right: 0;margin-left: 5;">
@@ -103,7 +103,7 @@
         <div class="cell hgr" onclick="document.getElementsByTagName('input')[5].focus()">
 			<div class="text-center">مستحضرات التجميل
 			<div style="font-size: 15px; font-weight: bold;">45% + 8% + 14%</div>
-				<div class="input"><input style="text-align: center;background: transparent;color: white;font-size: 20px;" type="number" data-role="input" onchange="tax(this,45,14,8)" id="cat5" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+				<div class="input"><input class="inputstyle" type="number" data-role="input" onchange="tax(this,45,14,8)" id="cat5" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
 			</div>
         </div>
         <div class="cell">
@@ -117,7 +117,7 @@
         <div class="cell hgr" onclick="document.getElementsByTagName('input')[6].focus()">
 			<div class="text-center">الخمور
 			<div style="font-size: 15px; font-weight: bold;">3000% + 150% + 14%</div>
-				<div class="input"><input style="text-align: center;background: transparent;color: white;font-size: 20px;" type="number" data-role="input" onchange="tax(this,3000,14,150)" id="cat6" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+				<div class="input"><input class="inputstyle" type="number" data-role="input" onchange="tax(this,3000,14,150)" id="cat6" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
 			</div>
         </div>
         <div class="cell">
@@ -164,22 +164,22 @@
 	<div class="row">
         <div class="cell hgr" style="margin-right: 0;" onclick="document.getElementsByTagName('input')[7].focus()">
 			<div class="text-center" style="font-size:large;">القيمة
-				<div class="input"><input id="calctax-value" style="text-align: center;background: transparent;color: white;font-size: 20px;" type="number" data-role="input" onchange="calctax()" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+				<div class="input"><input id="calctax-value" class="inputstyle";" type="number" data-role="input" onchange="calctax()" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
 			</div>
         </div>
         <div class="cell hgr" style="margin-right: 0;margin-left: 5;" onclick="document.getElementsByTagName('input')[8].focus()">
 			<div class="text-center" style="font-size:large;"> % فئة وارد
-				<div class="input"><input id="calctax-per1" style="text-align: center;background: transparent;color: white;font-size: 20px;" type="number" data-role="input" onchange="calctax()" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+				<div class="input"><input id="calctax-per1" class="inputstyle" type="number" data-role="input" onchange="calctax()" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
 			</div>
         </div>
         <div class="cell hgr" style="margin-right: 0;margin-left: 5;" onclick="document.getElementsByTagName('input')[9].focus()">
 			<div class="text-center" style="font-size:large;"> % فئة جدول
-				<div class="input"><input id="calctax-per3" style="text-align: center;background: transparent;color: white;font-size: 20px;" type="number" data-role="input" onchange="calctax()" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+				<div class="input"><input id="calctax-per3" class="inputstyle" type="number" data-role="input" onchange="calctax()" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
 			</div>
         </div>
         <div class="cell hgr" style="margin-left: 5;" onclick="document.getElementsByTagName('input')[10].focus()">
 			<div class="text-center" style="font-size:large;"> % فئة ق مضافة
-				<div class="input"><input id="calctax-per2" style="text-align: center;background: transparent;color: white;font-size: 20px;" type="number" data-role="input" onchange="calctax()" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+				<div class="input"><input id="calctax-per2" class="inputstyle" type="number" data-role="input" onchange="calctax()" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
 			</div>
         </div>
 	</div>
