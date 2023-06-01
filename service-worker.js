@@ -1,4 +1,4 @@
-const GHPATH = 'https://msami-shaaban.github.io/';
+const GHPATH = 'https://customs344243562.github.io/';
 // Change to a different app prefix name
 const APP_PREFIX = 'hbe_customs';
 const VERSION = 'version_01';
@@ -8,8 +8,10 @@ const VERSION = 'version_01';
 const URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
-  // add more paths if you need
-  // `${GHPATH}/js/app.js`
+  `${GHPATH}/backgroundImage.jpeg`,
+  `${GHPATH}/favicon.png`,
+  `${GHPATH}/style.css`,
+  `${GHPATH}/topAreaImage.jpeg`
 ]
 
 const CACHE_NAME = APP_PREFIX + VERSION
