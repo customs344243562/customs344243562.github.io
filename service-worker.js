@@ -9,9 +9,11 @@ const URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
   `${GHPATH}/main.js`,
+  `${GHPATH}/style.css`,
+  `${GHPATH}/metro-all.min.v4.5.1.css`,
+  `${GHPATH}/metro.min.v4.5.1.js`,
   `${GHPATH}/backgroundImage.jpeg`,
   `${GHPATH}/favicon.png`,
-  `${GHPATH}/style.css`,
   `${GHPATH}/topAreaImage.jpeg`
 ]
 
