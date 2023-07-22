@@ -1,18 +1,17 @@
-const GHPATH = 'https://customs344243562.github.io/';
 // Change to a different app prefix name
 
 // The files to make available for offline use. make sure to add 
 // others to this list
 const CACHED_URLS = [
-  `${GHPATH}/`,
-  `${GHPATH}/index.html`,
-  `${GHPATH}/main.js`,
-  `${GHPATH}/style.css`,
-  `${GHPATH}/metro-all.min.v4.5.1.css`,
-  `${GHPATH}/metro.min.v4.5.1.js`,
-  `${GHPATH}/backgroundImage.jpeg`,
-  `${GHPATH}/favicon.png`,
-  `${GHPATH}/topAreaImage.jpeg`
+  "/",
+  "/index.html",
+  "/main.js",
+  "/style.css",
+  "/metro-all.min.v4.5.1.css",
+  "/metro.min.v4.5.1.js",
+  "/backgroundImage.jpeg",
+  "/favicon.png",
+  "/topAreaImage.jpeg"
 ]
 
 const CACHE_NAME = 'hbe_cache'
@@ -76,3 +75,4 @@ self.addEventListener('activate', event => {
     )
   }())
 })
+	
