@@ -1,7 +1,5 @@
 const GHPATH = 'https://customs344243562.github.io/';
 // Change to a different app prefix name
-const APP_PREFIX = 'hbe_customs';
-const VERSION = 'version_01';
 
 // The files to make available for offline use. make sure to add 
 // others to this list
@@ -17,7 +15,7 @@ const CACHED_URLS = [
   `${GHPATH}/topAreaImage.jpeg`
 ]
 
-const CACHE_NAME = APP_PREFIX + VERSION
+const CACHE_NAME = 'hbe_cache'
 
 // Open cache on install.
 self.addEventListener('install', event => {
