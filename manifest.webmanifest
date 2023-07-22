@@ -455,12 +455,9 @@
   ],
   "theme_color": "#111111",
   "background_color": "#111111",
-  "display": "fullscreen",
+  "display": "standalone",
   "description": "HBE Customs",
   "orientation": "portrait-primary",
   "lang": "en",
-  "dir": "auto",
-  "display_override": [
-    "fullscreen"
-  ]
+  "dir": "auto"
 }
