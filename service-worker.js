@@ -45,18 +45,18 @@ self.addEventListener('fetch', event => {
 		const cache = await caches.open(CACHE_NAME)
 
 		const cachedResponsePromise = await cache.match(request)
-		//~ const networkResponsePromise = fetch(request)
+		 const networkResponsePromise = fetch(request)
 
-		//~ if (request.url.startsWith(self.location.origin)) {
-		  //~ event.waitUntil(async function () {
-			//~ const networkResponse = await networkResponsePromise
+		 if (request.url.startsWith(self.location.origin)) {
+		   event.waitUntil(async function () {
+			 const networkResponse = await networkResponsePromise
 
-			//~ await cache.put(request, networkResponse.clone())
-		  //~ }())
-		//~ }
+			 await cache.put(request, networkResponse.clone())
+		   }())
+		 }
 
-		//~ return cachedResponsePromise || networkResponsePromise
-		return cachedResponsePromise
+		 return cachedResponsePromise || networkResponsePromise
+		//return cachedResponsePromise
 	  }())
 	}
 	catch {
