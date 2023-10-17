@@ -75,6 +75,30 @@ function calctax() {
 	num=parseFloat(perinputVal*taxper + (perinputVal+(perinputVal*taxper))*tableper + (perinputVal+perinputVal*taxper+(perinputVal+(perinputVal*taxper))*tableper)*addedvalue).toFixed(2);
 	document.getElementById("calctax-total").innerHTML=Math.ceil(num);
 }
+function calcstoragefees() {
+	datestart = document.getElementsByTagName('input')[11].valueAsDate.getTime()
+	dateend = document.getElementsByTagName('input')[12].valueAsDate.getTime()
+	//if(dateend<datestart){return}
+	diffindays= (dateend-datestart)/ (1000 * 3600 * 24) + 1
+	if(diffindays>7){
+		fees=7*25 + (diffindays - 7) * 50
+		if(diffindays>=14){
+			fine=Math.ceil(fees*.05)
+		}else{
+			fine=0
+		}
+		totalfees=fees+fine
+	}else{
+		fees=diffindays*25
+		fine=0
+		totalfees=fees+fine
+	}
+	document.getElementById("totaldays").innerHTML=diffindays
+	document.getElementById("storagepayfine").innerHTML=fine
+	document.getElementById("storagefees").innerHTML=fees
+	document.getElementById("totalstoragefees").innerHTML=totalfees
+	
+}
 // PWA
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register(
@@ -83,3 +107,4 @@ if ('serviceWorker' in navigator) {
 	}
   )
 }
+document.getElementsByTagName('input')[12].valueAsDate=new Date
