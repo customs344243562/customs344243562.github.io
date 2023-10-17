@@ -78,7 +78,13 @@ function calctax() {
 function calcstoragefees() {
 	datestart = document.getElementsByTagName('input')[11].valueAsDate.getTime()
 	dateend = document.getElementsByTagName('input')[12].valueAsDate.getTime()
-	//if(dateend<datestart){return}
+	if(dateend<datestart){
+		document.getElementById("totaldays").innerHTML=0
+		document.getElementById("storagepayfine").innerHTML=0
+		document.getElementById("storagefees").innerHTML=0
+		document.getElementById("totalstoragefees").innerHTML=0
+		return
+	}
 	diffindays= (dateend-datestart)/ (1000 * 3600 * 24) + 1
 	if(diffindays>7){
 		fees=7*25 + (diffindays - 7) * 50
