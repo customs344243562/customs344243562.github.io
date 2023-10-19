@@ -13,7 +13,7 @@ function tax(element,taxper,addedvalue,devper) {
 	document.getElementById("totaltax").innerHTML=Number(document.getElementById("cat1tax").innerHTML)+Number(document.getElementById("cat2tax").innerHTML)+Number(document.getElementById("cat3tax").innerHTML)+Number(document.getElementById("cat4tax").innerHTML)+Number(document.getElementById("cat5tax").innerHTML)+Number(document.getElementById("cat6tax").innerHTML);
 
 	totaltax= Math.ceil(Number(document.getElementById("totaltax").innerHTML))
-	if(tataltax > 500){
+	if(totaltax > 500){
 	   fine=Math.ceil(Number(document.getElementById("totaltax").innerHTML)*.05);
 	   if (fine>7000){
 		   fine=7000;
@@ -21,7 +21,6 @@ function tax(element,taxper,addedvalue,devper) {
 	}else{
            fine=0
 	}
-	alert(fine)
 	document.getElementById("fine").innerHTML=fine;
 	document.getElementById("totalincfine").innerHTML=Math.ceil(Number(document.getElementById("totaltax").innerHTML)+fine);
 }
@@ -52,7 +51,7 @@ function taxtv() {
 	
 	document.getElementById("totaltax").innerHTML=Number(document.getElementById("cat1tax").innerHTML)+Number(document.getElementById("cat2tax").innerHTML)+Number(document.getElementById("cat3tax").innerHTML)+Number(document.getElementById("cat4tax").innerHTML)+Number(document.getElementById("cat5tax").innerHTML)+Number(document.getElementById("cat6tax").innerHTML);
 	
-	if(tataltax > 500){
+	if(totaltax > 500){
 	   fine=Math.ceil(Number(document.getElementById("totaltax").innerHTML)*.05);
 	   if (fine>7000){
 		   fine=7000;
