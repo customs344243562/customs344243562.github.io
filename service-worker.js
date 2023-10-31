@@ -12,9 +12,9 @@ const CACHED_URLS = [
   "/backgroundImage.jpeg",
   "/favicon.png",
   "/topAreaImage.jpeg",
-  "cdn.korzh.com/metroui/v4.5.1/css/metro-all.min.css",
-  "cdn.korzh.com/metroui/v4.5.1/js/metro.min.js",
-  "cdn.korzh.com/metroui/v4.5.1/mif/metro.woff"
+  "https://cdn.korzh.com/metroui/v4.5.1/css/metro-all.min.css",
+  "https://cdn.korzh.com/metroui/v4.5.1/js/metro.min.js",
+  "https://cdn.korzh.com/metroui/v4.5.1/mif/metro.woff"
 ]
 
 const CACHE_NAME = 'hbe_cache'
