@@ -154,4 +154,4 @@ if ('serviceWorker' in navigator) {
 	}
   )
 }
-document.getElementsByTagName('input')[12].valueAsDate=new Date
+document.getElementsByTagName('input')[15].valueAsDate=new Date
