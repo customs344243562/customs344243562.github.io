@@ -118,9 +118,13 @@ function change_g_or_s() {
 	if(document.getElementById('selectgoldorselver').value=="s"){
 		document.getElementById('goldtax_masnaeya').value=13
 		document.getElementById('calcgoldtax-per3').value=''
+		document.getElementById('g_s_tax_per').innerHTML='وارد 30%'
+		
 	}else{
 		document.getElementById('goldtax_masnaeya').value=80
 		document.getElementById('calcgoldtax-per3').value=''
+		document.getElementById('g_s_tax_per').innerHTML='وارد 10%'
+
 	}
 }
 function calcgoldtax(){
@@ -129,8 +133,15 @@ function calcgoldtax(){
 	gr_masnaeya=document.getElementById('goldtax_masnaeya').value
 
 	if(gr_price && gr_masnaeya && weight && weight!=0 && gr_masnaeya!=0 && gr_price!=0){
+		type=document.getElementById('selectgoldorselver').value
+		if(type=="g"){
+			taxper=.10
+		}else{
+			taxper=.30
+		}
+		
 		tvalue=weight*gr_price
-		wared_tax=Math.ceil(tvalue*.10)
+		wared_tax=Math.ceil(tvalue*taxper)
 		tmasnaeya=weight*gr_masnaeya
 		addedv=Math.ceil((wared_tax+tmasnaeya)*.14)
 		document.getElementById('calcgoldtax-res1').innerHTML=tvalue
