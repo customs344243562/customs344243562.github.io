@@ -114,6 +114,38 @@ function calcstoragefees() {
 	document.getElementById("totalstoragefees").innerHTML=totalfees
 	
 }
+function change_g_or_s() {
+	if(document.getElementById('selectgoldorselver').value=="s"){
+		document.getElementById('goldtax_masnaeya').value=13
+		document.getElementById('calcgoldtax-per3').value=''
+	}else{
+		document.getElementById('goldtax_masnaeya').value=80
+		document.getElementById('calcgoldtax-per3').value=''
+	}
+}
+function calcgoldtax(){
+	weight=document.getElementById('calcgoldtax-per1').value
+	gr_price=document.getElementById('calcgoldtax-per3').value
+	gr_masnaeya=document.getElementById('goldtax_masnaeya').value
+
+	if(gr_price && gr_masnaeya && weight && weight!=0 && gr_masnaeya!=0 && gr_price!=0){
+		tvalue=weight*gr_price
+		wared_tax=Math.ceil(tvalue*.10)
+		tmasnaeya=weight*gr_masnaeya
+		addedv=Math.ceil((wared_tax+tmasnaeya)*.14)
+		document.getElementById('calcgoldtax-res1').innerHTML=tvalue
+		document.getElementById('calcgoldtax-res2').innerHTML=wared_tax
+		document.getElementById('calcgoldtax-res3').innerHTML=addedv
+		document.getElementById('calcgoldtax-res4').innerHTML=addedv+wared_tax
+	}else{
+		document.getElementById('calcgoldtax-res1').innerHTML=0
+		document.getElementById('calcgoldtax-res2').innerHTML=0
+		document.getElementById('calcgoldtax-res3').innerHTML=0
+		document.getElementById('calcgoldtax-res4').innerHTML=0
+	}
+
+}
+change_g_or_s()
 // PWA
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register(

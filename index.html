@@ -179,7 +179,7 @@
 	<div class="row">
         <div class="cell hgr" style="margin-right: 0;" onclick="document.getElementsByTagName('input')[7].focus()">
 			<div class="text-center" style="font-size:large;">القيمة
-				<div class="input"><input id="calctax-value" class="inputstyle";" type="number" data-role="input" onKeyUp="calctax()" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+				<div class="input"><input id="calctax-value" class="inputstyle" type="number" data-role="input" onKeyUp="calctax()" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
 			</div>
         </div>
         <div class="cell hgr" style="margin-right: 0;margin-left: 5;" onclick="document.getElementsByTagName('input')[8].focus()">
@@ -216,6 +216,60 @@
 			<div class="text-center taxresult" id="calctax-total" style="color: #1bf719">0</div>
         </div>
 	</div>
+
+
+	<div class="row">
+		<div class="cell title">
+			<h1 class="text-center" style="color: lawngreen;font-size: xx-large;margin-top: 3;margin-bottom: 3;">ضريبة الذهب والفضة</h1>
+		</div>
+	</div>
+	<div class="row">
+        <div class="cell hgr" style="margin-right: 0;" onclick="document.getElementById('selectgoldorselver').focus()">
+			<div class="text-center" style="font-size:large;">النوع
+				<div class="input">
+					<select id="selectgoldorselver" style="margin: auto;text-align: center;border: none;" class="inputstyle" onChange="javascript:change_g_or_s();calcgoldtax()">
+						<option selected value="g">ذهب</option>
+						<option value="s" >فضة</option>
+					</select>
+					<div class="button-group"></div>
+				</div>
+			</div>
+        </div>
+        <div class="cell hgr" style="margin-right: 0;margin-left: 5;" onclick="document.getElementsByTagName('input')[11].focus()">
+			<div class="text-center" style="font-size:large;">الوزن
+				<div class="input"><input id="calcgoldtax-per1" class="inputstyle" type="number" data-role="input" onKeyUp="calcgoldtax()" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+			</div>
+        </div>
+        <div class="cell hgr" style="margin-right: 0;margin-left: 5;" onclick="document.getElementsByTagName('input')[12].focus()">
+			<div class="text-center" style="font-size:large;">سعر الجرام
+				<div class="input"><input id="calcgoldtax-per3" class="inputstyle" type="number" data-role="input" onKeyUp="calcgoldtax()" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+			</div>
+        </div>
+        <div class="cell hgr" style="margin-left: 5;" onclick="document.getElementsByTagName('input')[13].focus()">
+			<div class="text-center" style="font-size:large;">مصنعية
+				<div class="input"><input id="goldtax_masnaeya" class="inputstyle" type="number" data-role="input" onKeyUp="calcgoldtax()" data-clear-button="false" data-role-input="true" class=""><div class="button-group"></div></div>
+			</div>
+        </div>
+	</div>
+	<div class="row"style="margin-top: 10;">
+        <div class="cell hgr" style="margin-right: 0;margin-left: 5;">
+			<div class="text-center" style="margin-top: 15;font-size:large;">القيمة</div>
+			<div class="text-center taxresult" id="calcgoldtax-res1" style="color: #1bf719">0</div>
+        </div>
+        <div class="cell hgr" style="margin-right: 0;">
+			<div class="text-center" style="margin-top: 15;font-size:large;direction: rtl;">وارد 10%</div>
+			<div class="text-center taxresult" id="calcgoldtax-res2" style="color: #1bf719">0</div>
+        </div>
+        <div class="cell hgr" style="margin-right: 0;margin-left: 5;">
+			<div class="text-center" style="margin-top: 15;font-size:large;">ق.مضافة</div>
+			<div class="text-center taxresult" id="calcgoldtax-res3" style="color: #1bf719">0</div>
+        </div>
+        <div class="cell hgr" style="margin-left: 5;background: #ff00002e;">
+			<div class="text-center" style="margin-top: 15;font-size:large;">الإجمالي</div>
+			<div class="text-center taxresult" id="calcgoldtax-res4" style="color: #1bf719">0</div>
+        </div>
+	</div>
+
 	<div class="row">
 		<div class="cell title">
 			<h1 class="text-center" style="color: lawngreen;font-size: xx-large;margin-top: 3;margin-bottom: 3;">حساب الأرضيات</h1>
