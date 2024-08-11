@@ -85,8 +85,8 @@ function calctax() {
 	document.getElementById("calctax-total").innerHTML=Math.ceil(num);
 }
 function calcstoragefees() {
-	datestart = document.getElementsByTagName('input')[11].valueAsDate.getTime()
-	dateend = document.getElementsByTagName('input')[12].valueAsDate.getTime()
+	datestart = document.getElementsByTagName('input')[14].valueAsDate.getTime()
+	dateend = document.getElementsByTagName('input')[15].valueAsDate.getTime()
 	if(dateend<datestart){
 		document.getElementById("totaldays").innerHTML=0
 		document.getElementById("storagepayfine").innerHTML=0
