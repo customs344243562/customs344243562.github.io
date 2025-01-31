@@ -24,6 +24,8 @@
 	background-image: url(backgroundImage.jpeg);
 	font-family: Roboto,Helvetica,Arial,sans-serif;
 	background-size: cover;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 .title {
 	border: 0px;
