@@ -24,6 +24,32 @@ function tax(element,taxper,addedvalue,devper) {
 	document.getElementById("fine").innerHTML=fine;
 	document.getElementById("totalincfine").innerHTML=Math.ceil(Number(document.getElementById("totaltax").innerHTML)+fine);
 }
+function taxphone(element, taxper, addedvalue, devper) {
+  id = element.id
+  taxper = parseFloat(taxper / 100)
+  addedvalue = parseFloat(addedvalue / 100)
+  devper = parseFloat(devper / 100)
+  perinputVal = parseFloat(Number(document.getElementById(id).value));
+  num = parseFloat(3+ perinputVal*0.05+ perinputVal * taxper + (perinputVal + (perinputVal * taxper)) * addedvalue + (perinputVal + perinputVal * taxper + (perinputVal + (perinputVal * taxper)) * addedvalue) * devper).toFixed(2);
+  document.getElementById(id + "tax").innerHTML = Math.ceil(num);
+
+
+  document.getElementById("totalvalue").innerHTML = Number(document.getElementsByTagName("input")[0].value) + Number(document.getElementsByTagName("input")[1].value) + Number(document.getElementsByTagName("input")[2].value) + Number(document.getElementsByTagName("input")[5].value) + Number(document.getElementsByTagName("input")[6].value) + Number(document.getElementById("tvspricetotal").innerHTML);
+
+  document.getElementById("totaltax").innerHTML = Number(document.getElementById("cat1tax").innerHTML) + Number(document.getElementById("cat2tax").innerHTML) + Number(document.getElementById("cat3tax").innerHTML) + Number(document.getElementById("cat4tax").innerHTML) + Number(document.getElementById("cat5tax").innerHTML) + Number(document.getElementById("cat6tax").innerHTML);
+
+  totaltax = Math.ceil(Number(document.getElementById("totaltax").innerHTML))
+  if (totaltax > 500) {
+    fine = Math.ceil(Number(document.getElementById("totaltax").innerHTML) * .05);
+    if (fine > 7000) {
+      fine = 7000;
+    }
+  } else {
+    fine = 0
+  }
+  document.getElementById("fine").innerHTML = fine;
+  document.getElementById("totalincfine").innerHTML = Math.ceil(Number(document.getElementById("totaltax").innerHTML) + fine);
+}
 function taxtv() {
 	tvsize=Number(document.getElementById("tvsize").value);
 	tvpriceperin=Number(document.getElementById("tvpriceperin").value);
