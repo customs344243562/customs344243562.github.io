@@ -30,10 +30,11 @@ function taxphone(element, taxper, addedvalue, devper) {
   addedvalue = parseFloat(addedvalue / 100)
   devper = parseFloat(devper / 100)
   perinputVal = parseFloat(Number(document.getElementById(id).value));
-  num = parseFloat(perinputVal*0.05+ perinputVal * taxper + (perinputVal + (perinputVal * taxper)) * addedvalue + (perinputVal + perinputVal * taxper + (perinputVal + (perinputVal * taxper)) * addedvalue) * devper).toFixed(2);
+  taxondocument=0
   if(perinputVal>0){
-	num = parseFloat(3+num)
+   	taxondocument =3
   }
+  num = parseFloat( taxondocument + perinputVal*0.05+ perinputVal * taxper + (perinputVal + (perinputVal * taxper)) * addedvalue + (perinputVal + perinputVal * taxper + (perinputVal + (perinputVal * taxper)) * addedvalue) * devper).toFixed(2);
   document.getElementById(id + "tax").innerHTML = Math.ceil(num);
 
 
