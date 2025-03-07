@@ -145,6 +145,7 @@ function calcstoragefees() {
 	
 }
 function change_g_or_s() {
+	if(document.getElementById('selectgoldorselver').value=='g'){document.getElementById('showsilvertax').style.display='none';document.getElementById('showgoldtax').style.display='block'}else{document.getElementById('showsilvertax').style.display='block';document.getElementById('showgoldtax').style.display='none'}
 	if(document.getElementById('selectgoldorselver').value=="s"){
 		document.getElementById('goldtax_masnaeya').value=13
 		document.getElementById('calcgoldtax-per3').value=''
